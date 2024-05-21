@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34902.65
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Voice-activated_assistant", "Voice-activated_assistant.csproj", "{0ECA9A1F-229B-4031-AC97-790565CDB0EB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0ECA9A1F-229B-4031-AC97-790565CDB0EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0ECA9A1F-229B-4031-AC97-790565CDB0EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0ECA9A1F-229B-4031-AC97-790565CDB0EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0ECA9A1F-229B-4031-AC97-790565CDB0EB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5EC3C36A-11D4-4DA6-9082-467F2A06F812}
+	EndGlobalSection
+EndGlobal
