@@ -19,7 +19,7 @@ namespace Voice_activated_assistant
         /// <param name="outputFilePath"></param>
         public void StartRecording()
         {
-            this.outputFilePath = DateTime.Now.ToString("yyyy_MM_DD_HH_mm_ss_fff") + ".wav";
+            this.outputFilePath = DateTime.Now.ToString("yyyy_MM_dd_HH_mm_ss_fff") + ".wav";
 
             waveSource = new WaveInEvent
             {
@@ -28,6 +28,8 @@ namespace Voice_activated_assistant
 
             waveSource.DataAvailable += new EventHandler<WaveInEventArgs>(WaveSource_DataAvailable);
             waveSource.RecordingStopped += new EventHandler<StoppedEventArgs>(WaveSource_RecordingStopped);
+
+            //Console.WriteLine($"✅ {this.outputFilePath} 開始錄音，請說:");
 
             waveSource.StartRecording();
         }
@@ -85,6 +87,11 @@ namespace Voice_activated_assistant
         public void StopRecording()
         {
             waveSource?.StopRecording();
+            while (isRecording)
+            {
+                Thread.Sleep(100); // 等待一段時間，例如0.1秒
+            }
+            //Console.WriteLine($"🈚 {this.outputFilePath} 錄音結束!");
         }
 
         /// <summary>
