@@ -37,7 +37,7 @@ while (true)
     }
 
     recorder.StartRecording();
-    Thread.Sleep(10000); // 等待一段時間，例如10秒
+    await Task.Delay(10000);
     recorder.StopRecording();
 
     // 使用當前的時間戳來創建一個唯一的檔案名稱
@@ -48,7 +48,7 @@ while (true)
         using var fileStream = File.OpenRead(recorder.outputFilePath);
         await foreach (var result in processor.ProcessAsync(fileStream))
         {
-            Console.WriteLine($"{result.Start}->{result.End}: {result.Text}");
+            Console.WriteLine($"{recorder.outputFilePath}: {result.Start}->{result.End}: {result.Text}");
         }
     }    
 }
